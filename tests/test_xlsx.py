@@ -52,7 +52,6 @@ class TestExpenses:
         page.get_by_test_id("input-description").fill("тест")
         page.get_by_test_id("input-amount").fill("100")
         page.get_by_test_id("btn-add").click()
-        page.wait_for_timeout(200)
 
         file_path = download_file_from("[data-testid='btn-download']")
         tester = XLSXTester(file_path)
